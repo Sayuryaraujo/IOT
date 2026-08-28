@@ -1,8 +1,9 @@
+# Aula 2 — Semáforo com LEDs
+
 ![Aula dois piscando vermelho](assets/Aula%20dois%20piscando%20vermelho.png)
 
-![Aula dois piscando verde](assets/Aula%20dois%20piscando%20verde.png)
+### Código — Semáforo piscando vermelho e verde
 
-![Aula 2](assets/Aula2.png)
 ```cpp
 int verde = 8;
 int vermelho = 2;
@@ -24,7 +25,72 @@ void loop()
 }
 ```
 
+---
+
+### Aula 2 — Semáforo piscando verde
+
+![Aula dois piscando verde](assets/Aula%20dois%20piscando%20verde.png)
+
+### Código — Semáforo piscando vermelho e verde
+
+```cpp
+int verde = 8;
+int vermelho = 2;
+
+void setup()
+{
+  pinMode(verde, OUTPUT);
+  pinMode(vermelho, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(verde, 1);
+  digitalWrite(vermelho, 0);
+  delay(1000);
+  digitalWrite(verde, 0);
+  digitalWrite(vermelho, 1);
+  delay(1000);
+}
+```
+
+---
+
+### Aula 2 — Montagem do circuito
+
+![Aula 2](assets/Aula2.png)
+
+### Código — Semáforo
+
+```cpp
+int verde = 8;
+int vermelho = 2;
+
+void setup()
+{
+  pinMode(verde, OUTPUT);
+  pinMode(vermelho, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(verde, 1);
+  digitalWrite(vermelho, 0);
+  delay(1000);
+  digitalWrite(verde, 0);
+  digitalWrite(vermelho, 1);
+  delay(1000);
+}
+```
+
+---
+
+# Aula 4 — Experimento 1: Servo Motor com Potenciômetro
+
 ![Experimento 1 da aula 4](assets/Experimento1%20da%20aula4.png)
+
+### Código — Controle do servo motor pelo potenciômetro
+
 ```cpp
 #include <Servo.h>
 
@@ -49,7 +115,14 @@ void loop(){
 }
 ```
 
+---
+
+# Aula 4 — Experimento 2: Display de 7 Segmentos
+
 ![Experimento 2 da aula 4](assets/Experimento2%20da%20aula%204.jpeg)
+
+### Código — Contador no display de 7 segmentos
+
 ```cpp
 int a = 4, b = 5, c = 6, d = 7, e = 8, f = 9, g = 10;
 int botao = 2;
@@ -74,7 +147,14 @@ void numero(int coluna) {
 }
 ```
 
+---
+
+# Aula — Pista de Pouso
+
 ![Pista de Pouso](assets/Pista%20de%20Pouso.png)
+
+### Código — Controle dos LEDs com sensor de luminosidade
+
 ```cpp
 const int fotoresistor = A0;
 
@@ -117,7 +197,14 @@ void loop() {
 }
 ```
 
+---
+
+# Aula — Potenciômetro
+
 ![Potenciômetro](assets/Potenciometro.png)
+
+### Código — Controle do LED pelo potenciômetro
+
 ```cpp
 int led = 3; // Variável led assume o valor do pino 3
 int potenc = 0; // variável recebe o valor proveniente do sensor
@@ -134,7 +221,14 @@ digitalWrite(led,0); // Desliga a saída digital 3
 } // Fim do Programa
 ```
 
+---
+
+# Aula — Semáforo
+
 ![Semáforo](assets/Semaforo.png)
+
+### Código — Semáforo de dois sentidos
+
 ```cpp
 int vermelho1 = 8;
 int amarelo1 = 9;
@@ -187,5 +281,3 @@ void loop() {
   digitalWrite(amarelo2, LOW);
 }
 ```
-
-
