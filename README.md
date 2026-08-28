@@ -135,7 +135,7 @@ void setup() {
 }
 void loop() {
 	int click = digitalRead(botao);
-	delay(100); //Evitar flutuaçao no clique
+	delay(100); 
 	if(click) num++;
 	if(num < 10) numero(num); else num = 0;
 }
@@ -209,11 +209,11 @@ void loop() {
 int led = 3; 
 int potenc = 0; 
 void setup(){ 
-pinMode(led, OUTPUT); // Configura led(pino 3) como saída
+pinMode(led, OUTPUT); 
 } 
-void loop(){ // Início do Programa
+void loop(){ 
  potenc = analogRead(0); 
-if (potenc >512){ // Se pino 2 for igual a 1:
+if (potenc >512){ 
 digitalWrite(led,1); 
 } else { // Senão:
 digitalWrite(led,0); 
