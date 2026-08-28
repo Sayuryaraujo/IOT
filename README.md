@@ -206,19 +206,19 @@ void loop() {
 ### Código — Controle do LED pelo potenciômetro
 
 ```cpp
-int led = 3; // Variável led assume o valor do pino 3
-int potenc = 0; // variável recebe o valor proveniente do sensor
-void setup(){ // Configurações - Pinos de Entrada/Saída
+int led = 3; 
+int potenc = 0; 
+void setup(){ 
 pinMode(led, OUTPUT); // Configura led(pino 3) como saída
-} // Fim da configuração
+} 
 void loop(){ // Início do Programa
- potenc = analogRead(0); // Variável potenci recebe o valor da entrada A0
+ potenc = analogRead(0); 
 if (potenc >512){ // Se pino 2 for igual a 1:
-digitalWrite(led,1); // Aciona pino 13, NL=1 ou 5V na saída 3
+digitalWrite(led,1); 
 } else { // Senão:
-digitalWrite(led,0); // Desliga a saída digital 3
-} // Fim do Senão
-} // Fim do Programa
+digitalWrite(led,0); 
+} 
+} 
 ```
 
 ---
