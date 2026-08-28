@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACME - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <h1>ACME - Dashboard de entradas e saídas da empresa</h1>
+
+        <div class="linha"></div>
+
+        <section class="diario">
+
+            <h2>Diariamente</h2>
+
+            <div class="grafico diario-grafico">
+                <canvas id="graficoDiario"></canvas>
+            </div>
+
+        </section>
+
+        <section class="semanal">
+
+            <h2>Semanalmente</h2>
+
+            <div class="grafico semanal-grafico">
+                <canvas id="graficoSemanal"></canvas>
+            </div>
+
+        </section>
+
+        <section class="tabela-section">
+
+            <div class="tabela-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Semana</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelaDados"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="controles">
+
+                <span id="paginaTexto"></span>
+
+                <div class="botoes">
+
+                    <button id="anterior">
+                        Anterior
+                    </button>
+
+                    <button id="proximo">
+                        Próximo
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
